@@ -1,0 +1,317 @@
+/* General Styles */
+:root {
+    --primary-color: #6c63ff;
+    --secondary-color: #f5f5f5;
+    --text-color: #333;
+    --bg-color: #ffffff;
+    --sidebar-bg: #2d2b55;
+    --sidebar-text: #f5f5f5;
+    --border-color: #e0e0e0;
+    --bot-message-bg: #f0f7ff;
+    --user-message-bg: #e9f5ff;
+    --suggested-btn-bg: #f0f2ff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    height: 100vh;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+    padding: 0 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-header h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.sidebar-options {
+    flex-grow: 1;
+    padding: 20px 15px;
+}
+
+.feature-options {
+    margin-top: 20px;
+}
+
+.btn-sidebar {
+    width: 100%;
+    text-align: left;
+    color: var(--sidebar-text);
+    background: transparent;
+    border: none;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.btn-sidebar:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--sidebar-text);
+}
+
+.btn-sidebar i {
+    margin-right: 8px;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-footer {
+    padding: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* Main Content Styles */
+.main-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+}
+
+.chat-header {
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.chat-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.chat-header p {
+    margin: 10px 0 0;
+    color: #666;
+}
+
+/* Chat Area Styles */
+.chat-area {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.message {
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.bot-message {
+    justify-content: flex-start;
+}
+
+.user-message {
+    justify-content: flex-end;
+}
+
+.message-content {
+    max-width: 70%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.bot-message .message-content {
+    background-color: var(--bot-message-bg);
+    border-bottom-left-radius: 4px;
+}
+
+.user-message .message-content {
+    background-color: var(--primary-color);
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+.message-content p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.message-time {
+    font-size: 0.7rem;
+    margin-top: 5px;
+    text-align: right;
+    opacity: 0.7;
+}
+
+.suggested-questions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.btn-suggested {
+    background-color: var(--suggested-btn-bg);
+    border: 1px solid var(--border-color);
+    transition: all 0.2s;
+}
+
+.btn-suggested:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Input Area Styles */
+.input-area {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+}
+
+.input-group {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+    border: none;
+    padding: 12px 20px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.input-group .btn {
+    padding: 0 20px;
+    background-color: var(--primary-color);
+    border: none;
+}
+
+/* Feature Panels */
+.feature-panel {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-card {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+}
+
+.project-card p {
+    margin: 0 0 15px;
+    color: #666;
+}
+
+.skill-tag {
+    display: inline-block;
+    background-color: var(--suggested-btn-bg);
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+/* Skills Selection */
+.skills-selection {
+    margin-top: 20px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-checkbox {
+    display: none;
+}
+
+.skill-label {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: var(--suggested-btn-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.skill-checkbox:checked + .skill-label {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.team-match-result {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: var(--bot-message-bg);
+    display: none;
+}
+
+.recommended-skills {
+    margin-top: 10px;
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .message-content {
+        max-width: 85%;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+} 

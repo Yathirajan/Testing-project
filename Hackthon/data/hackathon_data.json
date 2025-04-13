@@ -1,0 +1,65 @@
+{
+    "common_questions": {
+        "what_is_hackathon": "A hackathon is a sprint-like event where programmers, designers, and others collaborate intensively on software projects. These events typically last 24-48 hours and encourage creative problem-solving in a collaborative environment.",
+        "how_to_prepare": "Prepare for a hackathon by forming a team with diverse skills, brainstorming ideas ahead of time, reviewing the theme and rules, setting up your development environment, bringing necessary equipment, and getting adequate rest before the event.",
+        "winning_tips": "To increase your chances of winning a hackathon, focus on solving a real problem, create a working prototype rather than just a concept, prepare a compelling pitch, demonstrate business potential, and ensure your solution addresses the hackathon's theme or challenges."
+    },
+    "project_ideas": [
+        {
+            "name": "Health Monitoring App",
+            "description": "Application that tracks health metrics and provides personalized insights using AI.",
+            "skills": ["Mobile Dev", "AI/ML", "Healthcare"]
+        },
+        {
+            "name": "Sustainable Energy Platform",
+            "description": "Platform to monitor and optimize energy consumption in residential buildings.",
+            "skills": ["IoT", "Data Science", "Web Dev"]
+        },
+        {
+            "name": "AR Learning Tool",
+            "description": "Augmented reality application for interactive learning experiences in STEM subjects.",
+            "skills": ["AR/VR", "Education", "Mobile Dev"]
+        },
+        {
+            "name": "Smart City Solution",
+            "description": "IoT-based system for urban infrastructure management and optimization.",
+            "skills": ["IoT", "Cloud", "Data Science"]
+        },
+        {
+            "name": "Financial Inclusion App",
+            "description": "Mobile banking solution for underserved communities with limited access to financial services.",
+            "skills": ["FinTech", "Mobile Dev", "UI/UX"]
+        },
+        {
+            "name": "Disaster Response Coordinator",
+            "description": "Platform to coordinate resources and volunteers during natural disasters.",
+            "skills": ["Cloud", "Web Dev", "Mobile Dev"]
+        },
+        {
+            "name": "Supply Chain Transparency Tool",
+            "description": "Blockchain solution to track product origins and ensure ethical sourcing.",
+            "skills": ["Blockchain", "Web Dev", "Data Science"]
+        },
+        {
+            "name": "Mental Health Assistant",
+            "description": "AI-powered chatbot providing mental health support and resources.",
+            "skills": ["AI/ML", "Healthcare", "UI/UX"]
+        }
+    ],
+    "skills_categories": [
+        "Web Dev", 
+        "Mobile Dev", 
+        "AI/ML", 
+        "Data Science", 
+        "IoT", 
+        "Cloud", 
+        "AR/VR", 
+        "Blockchain", 
+        "UI/UX", 
+        "Cybersecurity", 
+        "DevOps", 
+        "FinTech", 
+        "Healthcare", 
+        "Education"
+    ]
+} 

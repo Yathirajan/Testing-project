@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon Assistant</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row vh-100">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 sidebar">
+                <div class="sidebar-header">
+                    <h3><i class="fas fa-robot"></i> HackBot</h3>
+                </div>
+                <div class="sidebar-options">
+                    <button id="newChatBtn" class="btn btn-sidebar"><i class="fas fa-plus"></i> New Chat</button>
+                    <div class="feature-options">
+                        <button id="projectIdeasBtn" class="btn btn-sidebar"><i class="fas fa-lightbulb"></i> Project Ideas</button>
+                        <button id="teamMatchingBtn" class="btn btn-sidebar"><i class="fas fa-users"></i> Team Matching</button>
+                    </div>
+                </div>
+                <div class="sidebar-footer">
+                    <p>Hackathon Assistant v1.0</p>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9 col-lg-10 main-content">
+                <div id="chatHeader" class="chat-header">
+                    <h2>Hackathon Assistant</h2>
+                    <p>Ask me anything about hackathons, project ideas, or finding team members!</p>
+                </div>
+
+                <!-- Chat Area -->
+                <div id="chatArea" class="chat-area">
+                    <div id="messages" class="messages">
+                        <!-- Bot welcome message -->
+                        <div class="message bot-message">
+                            <div class="message-content">
+                                <p>Hello! I'm your Hackathon Assistant. How can I help you today?</p>
+                                <div class="message-time">Just now</div>
+                            </div>
+                        </div>
+                        <!-- Suggested questions -->
+                        <div class="suggested-questions">
+                            <button class="btn btn-sm btn-suggested" data-question="What is a hackathon?">What is a hackathon?</button>
+                            <button class="btn btn-sm btn-suggested" data-question="How to prepare for a hackathon?">How to prepare?</button>
+                            <button class="btn btn-sm btn-suggested" data-question="Suggest project ideas">Project ideas</button>
+                            <button class="btn btn-sm btn-suggested" data-question="How to find team members?">Find team members</button>
+                        </div>
+                    </div>
+
+                    <!-- Input Area -->
+                    <div class="input-area">
+                        <form id="chatForm">
+                            <div class="input-group">
+                                <input type="text" id="userInput" class="form-control" placeholder="Type your message..." autocomplete="off">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Project Ideas Panel (Hidden by default) -->
+                <div id="projectIdeasPanel" class="feature-panel" style="display: none;">
+                    <h2>Project Ideas</h2>
+                    <p>Browse through these trending hackathon project ideas:</p>
+                    <div id="projectIdeasList" class="projects-grid">
+                        <!-- Project ideas will be loaded here -->
+                        <div class="loading">Loading ideas...</div>
+                    </div>
+                </div>
+
+                <!-- Team Matching Panel (Hidden by default) -->
+                <div id="teamMatchingPanel" class="feature-panel" style="display: none;">
+                    <h2>Find Team Members</h2>
+                    <p>Select your skills to find complementary team members:</p>
+                    <div id="skillsSelection" class="skills-selection">
+                        <!-- Skills will be loaded here -->
+                        <div class="loading">Loading skills...</div>
+                    </div>
+                    <button id="findTeamBtn" class="btn btn-primary mt-3">Find Team Members</button>
+                    <div id="teamMatchResult" class="team-match-result mt-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html> 
